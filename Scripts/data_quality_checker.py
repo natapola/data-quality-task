@@ -6,39 +6,19 @@
 # #### Data Quality Checks
 # This notebook performs data validation on customer, product, and transaction datasets.
 
-# In[2]:
 
 
 import pandas as pd
 
-
-# In[3]:
-
-
-customers = pd.read_csv("C:/Users/IntelliBoard/Downloads/Task for Data Quality Engineer/Task for Data Quality Engineer/Data/customers.csv", sep=';')
-products = pd.read_csv("C:/Users/IntelliBoard/Downloads/Task for Data Quality Engineer/Task for Data Quality Engineer/Data/products.csv", sep=';')
-transactions = pd.read_csv("C:/Users/IntelliBoard/Downloads/Task for Data Quality Engineer/Task for Data Quality Engineer/Data/transactions.csv", sep=';')
-
-
-# In[4]:
-
+customers = pd.read_csv("../Data/customers_copy.csv", sep=',')
+products = pd.read_csv("../Data/products_copy.csv", sep=',')
+transactions = pd.read_csv("../Data/transactions_copy.csv", sep=',')
 
 customers.head(10)
 
-
-# In[5]:
-
-
 products.head(10)
 
-
-# In[6]:
-
-
 transactions.head(10)
-
-
-# In[7]:
 
 
 import re
@@ -159,8 +139,6 @@ def check_foreign_keys():
 
 
 
-        
-        
 # Check if email addresses have valid format
 def check_emails():
     email_column = "email"
@@ -177,7 +155,6 @@ def check_emails():
 
         
 
-        
         
  # Run all checks
 for table_name, data_in_table in tables.items():
