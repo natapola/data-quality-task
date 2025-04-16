@@ -1,0 +1,22 @@
+Table,Check,Status,Comment
+transactions,Missing values in 'transaction_id',OK,No nulls
+transactions,Missing values in 'transaction_date',FAIL,1 null values
+transactions,Missing values in 'product_id',OK,No nulls
+transactions,Missing values in 'amount',OK,No nulls
+transactions,Duplicate rows,OK,No duplicates
+products,Missing values in 'product_id',OK,No nulls
+products,Missing values in 'product_name',OK,No nulls
+products,Missing values in 'category',OK,No nulls
+products,Missing values in 'price',OK,No nulls
+products,Duplicate rows,OK,No duplicates
+customers,Missing values in 'customer_id',OK,No nulls
+customers,Missing values in 'first_name',OK,No nulls
+customers,Missing values in 'last_name',OK,No nulls
+customers,Missing values in 'email',OK,No nulls
+customers,Duplicate rows,OK,No duplicates
+transactions,Date format in 'transaction_date',OK,Valid format
+products,price > 0,OK,All prices are positive
+transactions,amount > 0,FAIL,44 non-positive amounts
+transactions,product_id in products,OK,All product_id values exist in products
+transactions,customer_id in customers,SKIPPED,Column not found
+customers,Valid email format,OK,All emails valid
