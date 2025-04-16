@@ -1,28 +1,32 @@
-### Data Quality Insights
-
+Data Quality Insights
 This document summarizes key data quality issues identified across the datasets provided.
 
-### Customers Table
-- Total rows: **1000**
-- **100 unique full names** and **100 unique email addresses**
+1. Customers Table
+- Total rows: 1000
+- 100 unique full names and 100 unique email addresses
 - Other rows are duplicate values
 - Email addresses are randomly assigned and do not match customer names
 
-### Products Table
-- Total rows: **1000**
-- **1000 unique product IDs**, no duplicates
-- Only **6 products** from **2 categories** were sold
-- **Price format is invalid**: values contain excessive decimal places, possibly due to currency conversion or incorrect formatting
 
-### Transactions Table
-- Total rows: **1000**, no duplicates
-- **44 negative values** in the `amount` column
-- **Missing transaction date** for `transaction_id = 7`
-- `amount` values do **not match** product `price`, which suggests a potential issue in the data pipeline  
-- This discrepancy may indicate incorrect calculations, discounts, currency conversion, or mismatched sources  
-- Further investigation would require access to transformation logic or additional metadata to trace the root cause
-- **Transaction dates are not in sequential order** relative to transaction IDs
+2. Products Table
+- Total rows: 1000
+- 1000 unique product IDs, no duplicates
+- Only 6 products from 2 categories were sold
+- Price format is invalid: values contain excessive decimal places, possibly due to currency conversion or incorrect formatting
 
-#### General Observations
-- All files use **semicolon (;)** as the delimiter
-- There is **no foreign key relationship** between the `customers` and `transactions` tables
+
+3. Transactions Table
+- Total rows: 1000, no duplicates
+- 44 negative values in the amount column
+- Missing transaction date for transaction_id = 7
+- Amount values do not match product price, which suggests a potential issue in the data pipeline
+
+This discrepancy may indicate incorrect calculations, discounts, currency conversion, or mismatched sources
+Further investigation would require access to transformation logic or additional metadata to trace the root cause
+
+- Transaction dates are not in sequential order relative to transaction IDs
+
+
+4. General Observations
+- All files use semicolon (;) as the delimiter
+- There is no foreign key relationship between the customers and transactions tables
