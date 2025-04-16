@@ -1,0 +1,26 @@
+Recommendations
+
+
+1. Reassign email addresses to the correct customers based on name matching.
+
+2. Review and address duplicate values across datasets.
+
+3. Add a customer_id column to the transactions table and define a foreign key constraint.
+
+4. Format price values to two decimal places during data loading or transformation (unless this is a feature or related to currency conversion).
+
+5. Identify the source of the amount column, including the cause of negative values.
+
+6. Adjust the ETL process to correctly populate the amount field and align it with the corresponding product price.
+
+7. Fill in or exclude records with missing transaction dates.
+
+8. Sort or standardize transaction dates to match the order of transaction_id.
+
+9. Configure CSV export to use a consistent delimiter — comma.
+
+10. Implement automated data quality checks in the pipeline to prevent similar issues in the future.
+
+11. Investigate the limited number of products sold and check for any missing transactions.
+
+12. Offer Nataliia a position as a Data Quality Engineer.
