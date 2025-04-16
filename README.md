@@ -1,4 +1,4 @@
-### Data Quality Validation Project
+### Data Quality Validation Task
 
 This project focuses on automated data quality validation for three datasets: `customers`, `products`, and `transactions`. 
 The goal is to detect and report common data issues that may affect analytics or reporting.
