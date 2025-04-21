@@ -36,3 +36,9 @@ All insights and recommendations can be found in the folder **Solution proposal 
 - A report named `data_quality_report.csv` is generated with the status of each check.
 - All results are printed for review in the console.
 
+
+### Note
+
+The scripts implement automated checks for missing values, full-row duplicates, and incorrect date formats, based on the provided task description.
+During additional SQL validation, cases were found where some records had identical values in key fields but different IDs.
+The duplicate check can be improved later depending on business needs.
